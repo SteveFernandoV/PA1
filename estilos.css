@@ -1,0 +1,69 @@
+/* Variables CSS */
+:root {
+  --color-principal: #3498db;
+  --color-fondo: #f4f4f4;
+  --color-texto: #333;
+  --espaciado: 1rem;
+  --borde: 2px solid var(--color-principal);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--color-principal);
+  color: white;
+  padding: var(--espaciado);
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 var(--espaciado);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: var(--espaciado);
+  margin: var(--espaciado);
+  border: var(--borde);
+  border-radius: 8px;
+  background-color: white;
+}
+
+/* Función CSS: calc */
+section h2 {
+  font-size: calc(1.2rem + 1vw);
+}
+
+/* Hack CSS: clearfix */
+footer::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  text-align: center;
+  padding: var(--espaciado);
+  background-color: #123;
+  color: #eee;
+}
