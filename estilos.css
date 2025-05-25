@@ -1,25 +1,30 @@
 /* Variables CSS */
 :root {
   --color-principal: #3498db;
-  --color-fondo: #f4f4f4;
-  --color-texto: #333;
+  --color-fondo: #000000; /* Fondo negro */
+  --color-texto: #ffffff; /* Texto blanco */
   --espaciado: 1rem;
   --borde: 2px solid var(--color-principal);
 }
 
 body {
   font-family: Arial, sans-serif;
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
+  background-color: var(--color-fondo); /* Fondo negro */
+  color: var(--color-texto); /* Texto blanco */
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: var(--color-principal);
+  background: url('imagenes/fondo-header.jpg') center/cover no-repeat;
   color: white;
-  padding: var(--espaciado);
+  padding: 3rem 1rem;
   text-align: center;
+}
+
+/* Fondo alternativo si no quieres imagen en header */
+header {
+  background-color: var(--color-principal);
 }
 
 nav ul {
@@ -46,12 +51,29 @@ section {
   margin: var(--espaciado);
   border: var(--borde);
   border-radius: 8px;
-  background-color: white;
+  background-color: #111; /* Fondo oscuro para secciones */
+  color: var(--color-texto);
 }
 
 /* Función CSS: calc */
 section h2 {
   font-size: calc(1.2rem + 1vw);
+}
+
+/* Estilos para las imágenes */
+.imagen-perfil {
+  width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 1rem auto;
+}
+
+.imagen-servicios {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  margin: 1rem auto;
+  display: block;
 }
 
 /* Hack CSS: clearfix */
@@ -64,6 +86,6 @@ footer::after {
 footer {
   text-align: center;
   padding: var(--espaciado);
-  background-color: #123;
+  background-color: #222; /* Footer oscuro */
   color: #eee;
 }
